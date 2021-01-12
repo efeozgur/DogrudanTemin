@@ -1,0 +1,11 @@
+﻿@helper Kutu(string labelText, string name, string type)
+{
+    <div class="form-group row">
+        <label for="email_address" class="col-md-4 col-form-label text-md-right">@labelText</label>
+        <div class="col-md-6">
+            
+            <input type="@type" id="@name" class="form-control" name="@name" required autofocus>
+        </div>
+    </div>
+
+}

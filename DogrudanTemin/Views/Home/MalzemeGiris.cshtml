@@ -32,6 +32,10 @@
         .tablolar th {
             font-size: 12px
         }
+        .borderless li {
+            border: 0 none;
+        }
+
     </style>
     <title>Malzeme Girişi</title>
 </head>
@@ -40,7 +44,7 @@
 
 
     <main class="login-form">
-        <div class="cotainer">
+        <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card">
@@ -87,11 +91,7 @@
                                         @Html.TextBoxFor(x => x.Malzeme.KdvOrani, new { @class = "form-control", type = "number", required = "true" })
                                     </div>
                                 </div>
-                                <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        Kaydet
-                                    </button>
-                                </div>
+                                
                             }
 
 
@@ -127,6 +127,57 @@
                                     }
                                 </table>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            Doğrudan Alım Bilgileri
+                        </div>
+                        <div class="card-body" style="text-align: center;">
+
+                            <ul class="list-group">
+                                <div class="borderless">
+                                    <div class="alert alert-info">
+                                        <h5>Dosya Numarası</h5>
+                                    </div>
+                                    <input type="" value="2020/1" class="form-control" />
+                                    <hr />
+                                    <div class="alert alert-info">
+                                        <h5>Açıklama</h5>
+                                    </div>
+                                    <input type="" value="Kırtasiye Malzemesi Alımı" class="form-control" />
+                                    
+                                    <br />
+
+
+
+                                </div>
+                            </ul>
+
+                        </div>
+                    </div>
+                    
+                    <hr />
+                    <div class="card">
+                        <div class="card-header">
+                            Sayfalar
+                        </div>
+                        <div class="card-body" style="text-align: center;">
+
+                            <ul class="list-group">
+                                <div class="borderless">
+                                    <li class="list-group-item"><button class="btn btn-danger">Yaklaşık Maliyet Cetveli </button></li>
+                                    <li class="list-group-item"><button class="btn btn-warning">Piyasa Araştırma Tutanağı</button></li>
+                                    <li class="list-group-item"><button class="btn btn-info">İhale Onay Belgesi</button></li>
+                                    <li class="list-group-item"><button class="btn btn-primary">Muayene Kabul Tutanağı</button></li>
+
+                                </div>
+                            </ul>
+
                         </div>
                     </div>
                 </div>

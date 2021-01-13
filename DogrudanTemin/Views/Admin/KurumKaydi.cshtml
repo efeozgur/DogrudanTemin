@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>KurumKaydi</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Login.css" rel="stylesheet" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Ubuntu:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="background">
+        <div class="left">
+            <h2 class="back-header">KAYIT EKRANI</h2>
+            <p class="back-p">Sisteme giriş yapabilmek için aşağıdaki KAYIT OL butonundan sisteme kayıt olunuz</p>
+            <button class="back-btn signup-but">KAYIT OL</button>
+        </div>
+        <div class="right">
+            <h2 class="back-header">SİSTEME GİRİŞ</h2>
+            <p class="back-p">Sisteme giriş için aşağıdaki GİRİŞ YAP butonunu kullanabilirsiniz</p>
+            <button class="back-btn login-but">GİRİŞ YAP</button>
+        </div>
+    </div>
+    <div class="form-container">
+        <div class="sign-up">
+            <h2 class="form-header">KAYIT</h2>
+            <input type="text" id="user" placeholder="Kurum Adı"><i class="fa fa-user"></i></input>
+            <input type="text" id="email" placeholder="Email"><i class="fa fa-envelope-o"></i></input>
+            <input type="password" id="pass" placeholder="Parola"><i class="fa fa-lock"></i></input>
+            <button class="form-btn">KAYIT OL</button>
+        </div>
+        <div class="login hide">
+            <h2 class="form-header">GİRİŞ</h2>
+            <input type="text" id="email" placeholder="Email"><i class="fa fa-envelope-o"></i></input>
+            <input type="password" id="pass" placeholder="Parola"><i class="fa fa-lock"></i></input>
+            <button class="form-btn">GİRİŞ YAP</button>
+            
+        
+        </div>
+    </div>
+</div>
+
+
+<script src="~/Content/Login.js"></script>
+    
+</body>
+</html>

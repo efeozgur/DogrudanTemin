@@ -65,3 +65,4 @@ C:\Users\PC GAMER\source\repos\DogrudanTemin\DogrudanTemin\bin\RestSharp.dll
 C:\Users\PC GAMER\source\repos\DogrudanTemin\DogrudanTemin\bin\RestSharp.xml
 C:\Users\PC GAMER\source\repos\DogrudanTemin\DogrudanTemin\obj\Debug\DogrudanTemin.Migrations._1401.resources
 C:\Users\PC GAMER\source\repos\DogrudanTemin\DogrudanTemin\obj\Debug\DogrudanTemin.csproj.GenerateResource.cache
+C:\Users\PC GAMER\source\repos\DogrudanTemin\DogrudanTemin\obj\Debug\DogrudanTemin.Migrations.olcubirimleri.resources

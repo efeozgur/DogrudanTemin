@@ -1,0 +1,23 @@
+﻿@model List<DogrudanTemin.Models.OLCUBIRIMLERI>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>OlcuBirimiEkle</title>
+</head>
+<body>
+<div>
+    <h1>bokum gibi</h1>
+    @foreach (var i in Model)
+    {
+        @i.OlcuBirimAdi <br/>
+    }
+
+</div>
+</body>
+</html>

@@ -17,6 +17,8 @@ namespace DogrudanTemin.Models
         public virtual DbSet<KISILER> Kisiler { get; set; }
         public virtual DbSet<KURUM> Kurum { get; set; }
         public virtual DbSet<MALZEME> Malzeme { get; set; }
+        public virtual DbSet<OLCUBIRIMLERI> OlcuBirimleri { get; set; }
+
 
     }
 }

@@ -10,5 +10,6 @@ namespace DogrudanTemin.ViewModels
     {
         public List<MALZEME> Malzemeler { get; set; }
         public MALZEME Malzeme { get; set; }
+        public OLCUBIRIMLERI OlcuBirimleri { get; set; }
     }
 }

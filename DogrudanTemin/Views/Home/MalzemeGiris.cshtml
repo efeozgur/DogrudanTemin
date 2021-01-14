@@ -14,35 +14,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Fonts -->
+
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
-
-    <link rel="stylesheet" href="css/style.css">
 
     <link rel="icon" href="Favicon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
     <link href="~/Content/Custom.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-3.5.1.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     <style>
         .tablolar th {
             font-size: 12px
         }
+
         .borderless li {
             border: 0 none;
         }
-
     </style>
     <title>Malzeme Girişi</title>
 </head>
 <body>
-
-
-
     <main class="login-form">
         <div class="container-fluid">
             <div class="row justify-content-center">
@@ -83,15 +80,28 @@
                                             "Kutu"
                                         }), new { @class = "form-control" })
                                     </div>
+
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
+                                            Ekle
+                                        </button>
+                                    </div>
+
                                 </div>
+
+
 
                                 <div class="form-group row">
                                     <label class="col-md-4 col-form-label text-md-right">KDV Oranı %</label>
                                     <div class="col-md-6">
                                         @Html.TextBoxFor(x => x.Malzeme.KdvOrani, new { @class = "form-control", type = "number", required = "true" })
+                                        <hr />
+                                        <div class="col-md-12">
+                                            @*@Html.ActionLink("Ekle","MalzemeGiris",new {type="submit"},new {@class="btn btn-danger"})*@
+                                            <input class="btn btn-success" type="submit" value="Ekle" />
+                                        </div>
                                     </div>
                                 </div>
-                                
                             }
 
 
@@ -130,9 +140,9 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-3">
-                    
+
                     <div class="card">
                         <div class="card-header">
                             Doğrudan Alım Bilgileri
@@ -150,17 +160,11 @@
                                         <h5>Açıklama</h5>
                                     </div>
                                     <input type="" value="Kırtasiye Malzemesi Alımı" class="form-control" />
-                                    
                                     <br />
-
-
-
                                 </div>
                             </ul>
-
                         </div>
                     </div>
-                    
                     <hr />
                     <div class="card">
                         <div class="card-header">
@@ -174,10 +178,8 @@
                                     <li class="list-group-item"><button class="btn btn-warning">Piyasa Araştırma Tutanağı</button></li>
                                     <li class="list-group-item"><button class="btn btn-info">İhale Onay Belgesi</button></li>
                                     <li class="list-group-item"><button class="btn btn-primary">Muayene Kabul Tutanağı</button></li>
-
                                 </div>
                             </ul>
-
                         </div>
                     </div>
                 </div>
@@ -188,5 +190,30 @@
 
 
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Ölçü Birimi Ekle</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @using (Html.BeginForm("OlcuBirimiEkle", "Home", FormMethod.Post))
+                {
+                    <div class="modal-body">
+                        @Html.TextBoxFor(x => x.OlcuBirimleri.OlcuBirimAdi, new { @class = "form-control", required = "true" })
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Vazgeç</button>
+                        <button type="submit" class="btn btn-success">Ekle</button>
+                        
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
 </body>
 </html>

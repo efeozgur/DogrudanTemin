@@ -21,7 +21,7 @@ namespace DogrudanTemin.Controllers
         [HttpGet]
         public ActionResult MalzemeGiris()
         {
-            
+
             mvm.Malzemeler = db.Malzeme.ToList();
             return View(mvm);
         }
@@ -47,10 +47,10 @@ namespace DogrudanTemin.Controllers
 
         public string SifreOlustur(string sifre)
         {
-            MD5 md5Hasher= MD5.Create();
+            MD5 md5Hasher = MD5.Create();
             byte[] data = md5Hasher.ComputeHash(Encoding.Default.GetBytes(sifre));
             StringBuilder sBuilder = new StringBuilder();
-            for (int i = 0; i< data.Length; i++)
+            for (int i = 0; i < data.Length; i++)
             {
                 sBuilder.Append(data[i].ToString("x2"));
             }
@@ -58,7 +58,23 @@ namespace DogrudanTemin.Controllers
 
         }
 
-      
+        [HttpGet]
+        public ActionResult OlcuBirimiEkle()
+        {
+            return RedirectToAction("MalzemeGiris");
+        }
 
+        [HttpPost]
+        public ActionResult OlcuBirimiEkle(OLCUBIRIMLERI olcu)
+        {
+            if (olcu.ID>0)
+            {
+                db.OlcuBirimleri.Add(olcu);
+                db.SaveChanges();
+                return RedirectToAction("OlcuBirimiEkle", db.OlcuBirimleri.ToList());
+            }
+
+            return RedirectToAction("OlcuBirimiEkle", db.OlcuBirimleri.ToList());
+        }
     }
 }
